@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { sign } from "crypto";
 
-export const supabase = createClientComponentClient({
+const supabase = createClientComponentClient({
   supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL,
   supabaseKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 });
