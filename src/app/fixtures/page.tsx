@@ -9,12 +9,13 @@ export default async function Page() {
 
   return (
     <div className="">
-      <Pagination fixtureArr={data} />
+      {data}
+      {/* <Pagination fixtureArr={data} /> */}
     </div>
   );
 }
 
-async function getFixtures(): Promise<FixtureProps[]> {
+async function getFixtures(): Promise<string> {
   const nextCookies = cookies();
   const res = await fetch(`${process.env.API_URL}/api/v1/getAllFixtures`, {
     method: "GET",
@@ -27,6 +28,7 @@ async function getFixtures(): Promise<FixtureProps[]> {
   });
   const data: ApiResult = await res.json();
   console.log(data);
-  const fixtures: FixtureProps[] = JSON.parse(data.message).response;
-  return fixtures;
+  // const fixtures: FixtureProps[] = JSON.parse(data.message).response;
+
+  return JSON.stringify(data);
 }
