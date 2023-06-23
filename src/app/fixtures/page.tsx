@@ -26,6 +26,7 @@ async function getFixtures(): Promise<FixtureProps[]> {
     },
   });
   const data: ApiResult = await res.json();
+  console.log(data);
   const fixtures: FixtureProps[] = JSON.parse(data.message).response;
   return fixtures;
 }
