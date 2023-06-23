@@ -76,7 +76,7 @@ export default function Home() {
           >
             <h3 className="w-full text-xl mb-1 text-white">Login</h3>
             <input
-              className="w-full mb-5 "
+              className="w-full mb-5"
               type="text"
               onChange={(e) => updateName(e.target.value)}
             ></input>
