@@ -16,12 +16,26 @@
   }
 }
 
+*,
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
+  background-image: url(./blurry-gradient.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  backdrop-filter: blur(14px);
+  /*
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    */
 }
