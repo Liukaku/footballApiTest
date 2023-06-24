@@ -54,7 +54,7 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
           }}
         ></input>
       </div>
-      <div className="md:w-1/2 flex flex-wrap mx-auto  justify-around overflow-hidden">
+      <div className="md:w-1/2 flex flex-wrap mx-auto  justify-around overflow-hidden hideLogos">
         <AnimatePresence>
           {fixtures.map((event, i) => {
             if (i < 10) {
@@ -80,7 +80,7 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
                 >
                   <Link
                     href={`/fixtures/${event.fixture.id}`}
-                    className=" inline-block w-full h-full overflow-hidden"
+                    className=" inline-block w-full h-full overflow-hidden absolute"
                   >
                     <Fixture
                       fixture={event.fixture}
