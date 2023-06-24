@@ -39,3 +39,7 @@ body {
     rgb(var(--background-start-rgb));
     */
 }
+
+.hideLogos {
+  overflow: hidden;
+}
