@@ -4,13 +4,13 @@ import Image from "next/image";
 
 const Fixture = ({ fixture, teams, goals }: FixtureProps) => {
   return (
-    <div className=" flex flex-wrap h-full items-center">
+    <div className=" flex flex-wrap h-full items-center overflow-hidden">
       <Image
         src={teams.home.logo}
         alt={""}
         width={150}
         height={150}
-        className="opacity-50 absolute blur-sm z-0"
+        className="opacity-50 left-0 absolute blur-sm z-0"
       />
       <div className="w-full text-center z-20 font-bold">
         <h1 className="">

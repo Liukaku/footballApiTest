@@ -61,26 +61,26 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
               return (
                 <motion.div
                   initial={{
-                    // x: 10,
+                    x: 10,
                     backdropFilter: "blur(0px)",
                     filter: "blur(8px)",
                     zIndex: -1,
                   }}
                   animate={{
                     filter: "blur(0px)",
-                    // x: 0,
+                    x: 0,
                     backdropFilter: "blur(4px)",
                     zIndex: 0,
                   }}
                   transition={{
-                    duration: 1,
+                    duration: 0.3,
                   }}
                   key={event.fixture.id}
                   className=" shadow-md shadow-black/20 md:w-5/12 w-8/12 rounded-md my-1 cursor-pointer overflow-hidden bg-[#77ACA2]/50 border border-white/30 h-[17vh] hover:bg-yellow-200/10 duration-200 ease-in-out transition"
                 >
                   <Link
                     href={`/fixtures/${event.fixture.id}`}
-                    className=" inline-block w-full h-full"
+                    className=" inline-block w-full h-full overflow-hidden"
                   >
                     <Fixture
                       fixture={event.fixture}
@@ -95,7 +95,7 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
           })}
         </AnimatePresence>
       </div>
-      <div className="md:w-3/12 w-7/12 flex justify-between mx-auto">
+      <div className="md:w-3/12 w-7/12 flex justify-between mx-auto mt-2 mb-10">
         <button
           className="bg-[#77ACA2]/50 border-2 border-white/30  hover:bg-yellow-200/10 active:bg-yellow-900/10 duration-300 transition rounded-md px-3 py-1 "
           onClick={() => {
