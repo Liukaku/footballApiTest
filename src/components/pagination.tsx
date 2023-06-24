@@ -80,7 +80,7 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
                 >
                   <Link
                     href={`/fixtures/${event.fixture.id}`}
-                    className=" inline-block w-full h-full overflow-hidden absolute"
+                    className=" inline-block w-full h-full overflow-hidden max-h-[17vh] max-w-[66vw]"
                   >
                     <Fixture
                       fixture={event.fixture}
