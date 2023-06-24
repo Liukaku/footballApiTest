@@ -60,16 +60,23 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
             if (i < 10) {
               return (
                 <motion.div
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
+                  initial={{
+                    // x: 10,
+                    backdropFilter: "blur(0px)",
+                    filter: "blur(8px)",
+                    zIndex: -1,
+                  }}
+                  animate={{
+                    filter: "blur(0px)",
+                    // x: 0,
+                    backdropFilter: "blur(4px)",
+                    zIndex: 0,
+                  }}
                   transition={{
-                    duration: 0.1,
-                    ease: "easeInOut",
-                    delay: 0.2,
+                    duration: 1,
                   }}
                   key={event.fixture.id}
-                  className=" shadow-md shadow-black/20 md:w-5/12 w-8/12 rounded-md my-1 cursor-pointer overflow-hidden bg-[#77ACA2]/50 border border-white/30 backdrop-blur-sm h-[17vh] hover:bg-yellow-200/10 duration-200 ease-in-out transition"
+                  className=" shadow-md shadow-black/20 md:w-5/12 w-8/12 rounded-md my-1 cursor-pointer overflow-hidden bg-[#77ACA2]/50 border border-white/30 h-[17vh] hover:bg-yellow-200/10 duration-200 ease-in-out transition"
                 >
                   <Link
                     href={`/fixtures/${event.fixture.id}`}
