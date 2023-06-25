@@ -38,7 +38,6 @@ async function Page({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <>{console.log(fixRes, oddsRes)}</>
       <div className=" flex flex-wrap sticky top-0 bg-black/70 pt-5 backdrop-blur-md z-20 ">
         <div className="w-full text-center">
           <div className="flex md:w-3/12 w-11/12 mx-auto md:pb-0 pb-3">
@@ -79,6 +78,7 @@ async function Page({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
+
         <div className="md:flex flex-wrap justify-around pb-2 mt-2 mx-auto hidden">
           {betKeys.map((key) => {
             return (
@@ -92,7 +92,21 @@ async function Page({ params }: { params: { id: string } }) {
           })}
         </div>
       </div>
-      <Odds groupedByBets={groupedByBets} />
+      {oddsRes.response[0] ? (
+        <Odds groupedByBets={groupedByBets} />
+      ) : (
+        <div className="h-[86vh] backdrop-blur-md">
+          <div className="md:w-1/3 w-10/12 text-center mx-auto mt-5 py-2 bg-cyan-950/70 hover:bg-cyan-800/70 duration-500 border rounded-lg shadow-xl shadow-black/30 border-white/20">
+            There are no odds for this fixture
+          </div>
+          <Link
+            href={"./"}
+            className="bg-[#77ACA2]/50 border-2 block md:w-2/12 w-10/12 text-center mt-5 border-white/30  hover:bg-yellow-200/10 active:bg-yellow-900/10 duration-300 transition rounded-md py-1 px-2 mx-auto"
+          >
+            Back to fixtures
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

@@ -21,6 +21,11 @@ html {
   scroll-behavior: smooth !important;
 }
 
+html {
+  background-color: #72a69c;
+  scroll-padding-top: 40vh;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background-image: url(./blurry-gradient.svg);
@@ -42,4 +47,12 @@ body {
 
 .hideLogos {
   overflow: hidden;
+}
+#render_error {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
 }

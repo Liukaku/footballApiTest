@@ -10,7 +10,7 @@ const Fixture = ({ fixture, teams, goals }: FixtureProps) => {
         alt={""}
         width={150}
         height={150}
-        className="opacity-50 left-0 absolute blur-sm z-0"
+        className="opacity-50 md:left-0 left-16 absolute blur-sm z-0 aspect-square md:w-auto w-1/4"
       />
       <div className="w-full text-center z-20 font-bold">
         <h1 className="">
@@ -26,7 +26,7 @@ const Fixture = ({ fixture, teams, goals }: FixtureProps) => {
         alt={""}
         width={150}
         height={150}
-        className="opacity-50 absolute blur-sm z-0 right-0"
+        className="opacity-50 absolute blur-sm z-0 md:right-0 right-16 aspect-square md:w-auto w-1/4"
       />
     </div>
   );

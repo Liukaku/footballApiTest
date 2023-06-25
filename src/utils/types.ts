@@ -19,6 +19,7 @@ interface FixtureProps {
   fixture: Fixture;
   teams: Teams;
   goals: Goals;
+  league?: League;
 }
 
 interface Fixture {

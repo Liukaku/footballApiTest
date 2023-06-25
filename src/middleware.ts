@@ -7,6 +7,9 @@ export async function middleware(req: NextRequest) {
   const supabase = createMiddlewareClient<any>({ req, res });
   const { data, error } = await supabase.auth.getSession();
   const url = req.url.split("/");
+  if (req.url.includes("reset")) {
+    return res;
+  }
   // redirect to login page if no session and not on login page
   if (!data.session && req.nextUrl.pathname !== "/" && !url.includes("_next")) {
     return NextResponse.redirect(req.nextUrl.origin + "/");
