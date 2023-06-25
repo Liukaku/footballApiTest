@@ -37,21 +37,6 @@ const Pagination = ({ fixtureArr }: PaginationProps) => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const search = e.target.value;
     setSearchBar(search);
-    // const filteredFixtures = fixtureArr
-    // .filter((fixture) => {
-    //   return (
-    //     fixture.teams.home.name
-    //       .toLowerCase()
-    //       .includes(search.toLowerCase()) ||
-    //     fixture.teams.away.name.toLowerCase().includes(search.toLowerCase())
-    //   );
-    // })
-    //   .slice(0, 10);
-    // setFixtures(filteredFixtures);
-
-    // if (search === "") {
-    //   setFixtures(fixtureArr.slice(0, 10));
-    // }
   };
 
   useEffect(() => {

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fixture returns true 1`] = `
+<div
+  className=" flex flex-wrap h-full items-center overflow-hidden"
+>
+  <img
+    alt=""
+    className="opacity-50 md:left-0 left-16 absolute blur-sm z-0 aspect-square md:w-auto w-1/4"
+    data-nimg="1"
+    decoding="async"
+    height={150}
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F1.png&w=384&q=75"
+    srcSet="/_next/image?url=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F1.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F1.png&w=384&q=75 2x"
+    style={
+      {
+        "color": "transparent",
+      }
+    }
+    width={150}
+  />
+  <div
+    className="w-full text-center z-20 font-bold"
+  >
+    <h1
+      className=""
+    >
+      Home Team
+       vs 
+      Away Team
+    </h1>
+    <h3>
+      2
+       - 
+      0
+    </h3>
+    <h3>
+      Full Time
+    </h3>
+  </div>
+  <img
+    alt=""
+    className="opacity-50 absolute blur-sm z-0 md:right-0 right-16 aspect-square md:w-auto w-1/4"
+    data-nimg="1"
+    decoding="async"
+    height={150}
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F1.png&w=384&q=75"
+    srcSet="/_next/image?url=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F1.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F1.png&w=384&q=75 2x"
+    style={
+      {
+        "color": "transparent",
+      }
+    }
+    width={150}
+  />
+</div>
+`;

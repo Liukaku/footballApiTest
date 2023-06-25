@@ -16,13 +16,13 @@ interface PaginationProps {
 }
 
 interface FixtureProps {
-  fixture: Fixture;
+  fixture: IFixture;
   teams: Teams;
   goals: Goals;
   league?: League;
 }
 
-interface Fixture {
+interface IFixture {
   id: number;
   referee: string;
   timezone: string;
@@ -73,7 +73,7 @@ interface Odds {
 
 interface Response {
   league: League;
-  fixture: Fixture;
+  fixture: IFixture;
   update: string;
   bookmakers: Bookmaker[];
 }
@@ -93,13 +93,6 @@ interface Bet {
 interface Value {
   value: string;
   odd: string;
-}
-
-interface Fixture {
-  id: number;
-  timezone: string;
-  date: string;
-  timestamp: number;
 }
 
 interface League {
